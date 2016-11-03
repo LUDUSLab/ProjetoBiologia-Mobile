@@ -1,0 +1,423 @@
+fileFormatVersion: 2
+guid: bc2f15f7eee816240ae8a438417d8696
+timeCreated: 1477953546
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: botoes_0
+    21300002: botoes_1
+    21300004: botoes_2
+    21300006: botoes_3
+    21300008: botoes_4
+    21300010: botoes_5
+    21300012: botoes_6
+    21300014: botoes_7
+    21300016: botoes_8
+    21300018: botoes_9
+    21300020: botoes_10
+    21300022: botoes_11
+    21300024: botoes_12
+    21300026: botoes_13
+    21300028: botoes_14
+    21300030: botoes_15
+    21300032: botoes_16
+    21300034: botoes_17
+    21300036: botoes_18
+    21300038: botoes_19
+    21300040: botoes_20
+    21300042: botoes_21
+    21300044: botoes_22
+    21300046: botoes_23
+    21300048: botoes_24
+    21300050: botoes_25
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 2
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: botoes_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1641
+        width: 196
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_1
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1641
+        width: 195
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_2
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1641
+        width: 196
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_3
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1641
+        width: 194
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_4
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 1641
+        width: 194
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_5
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1383
+        width: 196
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_6
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1383
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_7
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1383
+        width: 196
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_8
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1383
+        width: 194
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_9
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 1383
+        width: 194
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1133
+        width: 196
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_11
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1133
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_12
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1133
+        width: 196
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_13
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1133
+        width: 194
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_14
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 1133
+        width: 194
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_15
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 908
+        width: 196
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_16
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 908
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_17
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 869
+        width: 228
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_18
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 639
+        width: 507
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_19
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 639
+        width: 307
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_20
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 438
+        width: 507
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_21
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 438
+        width: 307
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_22
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 226
+        width: 507
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_23
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 226
+        width: 307
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_24
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 8
+        width: 507
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: botoes_25
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 8
+        width: 307
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
