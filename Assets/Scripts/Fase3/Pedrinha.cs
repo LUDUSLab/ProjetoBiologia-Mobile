@@ -9,6 +9,8 @@ public class Pedrinha : MonoBehaviour {
 	bool visao = false;
 	private indiozinho personagem;
 	public float forcinhaPraPular;
+    private bool click = false;
+    private string resposta = "visao", novaresposta;
 
 	// Use this for initialization
 	void Start () {
@@ -21,9 +23,98 @@ public class Pedrinha : MonoBehaviour {
 		goOlhar();
 		stopTato();
 		GoTato();
-	}
+        botaomobile();
+    }
 
-	void stopOlhar()
+    void botaomobile()
+    {
+        if (indio.transform.position.x >= 73.7 && indio.transform.position.x <= 73.9 && click)
+        {
+            click = false;
+            if (resposta != novaresposta)
+            {
+                Debug.Log("entrou nesse game over aqui de agr do cipo");
+                SceneManager.LoadScene("GameOver");
+            }
+            else if (resposta == novaresposta)
+            {
+                barraTempo.SetActive(false);
+                indio.GetComponent<Animator>().SetBool("parar", false);
+                balaoDuvida.SetActive(false);
+                feedBackVisao.SetActive(false);
+                PedraConcreta.SetActive(true);
+                personagem.goOrStay = true;
+                GetComponent<Score>().Addscore();
+            }
+        }
+        else if (indio.transform.position.x >= 77.6 && indio.transform.position.x <= 77.8 && click)
+        {
+            click = false;
+            if (resposta != novaresposta)
+            {
+                Debug.Log("entrou nesse game over aqui de agr do cipo");
+                SceneManager.LoadScene("GameOver");
+            }
+            else if (resposta == novaresposta)
+            {
+                barraTempo.SetActive(false);
+                balaoDuvida.SetActive(false);
+                Vector2 direcaoPulo = new Vector2(0.2f, 0.8f);
+                direcaoPulo.Normalize();
+                indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
+                indio.GetComponent<Animator>().SetBool("pulando", true);
+                Invoke("VoltaraAndar", 0.6f);
+                GetComponent<Score>().Addscore();
+            }
+        }
+    }
+
+    public void usarmao()
+    {
+        if (indio.transform.position.x >= 73.7 && indio.transform.position.x <= 73.9 || indio.transform.position.x >= 77.6 && indio.transform.position.x <= 77.8)
+        {
+            novaresposta = "tocar";
+            click = true;
+        }
+    }
+
+    public void usaraudicao()
+    {
+        if (indio.transform.position.x >= 73.7 && indio.transform.position.x <= 73.9 || indio.transform.position.x >= 77.6 && indio.transform.position.x <= 77.8)
+        {
+            novaresposta = "audicao";
+            click = true;
+        }
+    }
+
+    public void usarolfato()
+    {
+        if (indio.transform.position.x >= 73.7 && indio.transform.position.x <= 73.9 || indio.transform.position.x >= 77.6 && indio.transform.position.x <= 77.8)
+        {
+            novaresposta = "olfato";
+            click = true;
+        }
+    }
+
+    public void usarvisao()
+    {
+        if (indio.transform.position.x >= 73.7 && indio.transform.position.x <= 73.9 || indio.transform.position.x >= 77.6 && indio.transform.position.x <= 77.8)
+        {
+            novaresposta = "visao";
+            click = true;
+        }
+    }
+
+    public void usarpaladar()
+    {
+        if (indio.transform.position.x >= 73.7 && indio.transform.position.x <= 73.9 || indio.transform.position.x >= 77.6 && indio.transform.position.x <= 77.8)
+        {
+            novaresposta = "paladar";
+            click = true;
+        }
+    }
+
+    void stopOlhar()
 	{
 		if(indio.transform.position.x >=73.7 && indio.transform.position.x <=73.9)
 		{
@@ -70,6 +161,7 @@ public class Pedrinha : MonoBehaviour {
 		{
 			if(tato == false)
 			{
+                resposta = "tocar";
 				barraTempo.SetActive(true);				
 				balaoDuvida.SetActive (true);
 				personagem.goOrStay = false;
@@ -90,9 +182,7 @@ public class Pedrinha : MonoBehaviour {
 				Vector2 direcaoPulo = new Vector2(0.2f, 0.8f);
 				direcaoPulo.Normalize();
 				indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
-				//this.GetComponent<Escalada>().enabled = false;
 				indio.GetComponent<Animator>().SetBool("pulando", true);
-				//personagem.goOrStay = true;
 				Invoke("VoltaraAndar", 0.6f);
 				GetComponent<Score>().Addscore();
 			}

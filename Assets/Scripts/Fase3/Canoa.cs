@@ -7,9 +7,11 @@ public class Canoa : MonoBehaviour {
 	public float velo, forcinhaPraPular;
 	private indiozinho personagem;
 	public bool goOrStay = true;
-	public GameObject canoa, indio, balaoDuvida, soulIndio;
+	public GameObject canoa, indio, balaoDuvida, soulIndio, fadezinho, Controller;
 	bool tato = false;
 	bool Gatilho = true;
+    private bool click = false;
+    private string resposta = "tocar", novaresposta;
 
 	void Start(){
 		personagem = indio.GetComponent<indiozinho>();
@@ -21,7 +23,15 @@ public class Canoa : MonoBehaviour {
 		stopRemo();
 		goRemar();
 		SairdoBarco();
-	}
+        botaomobile();
+        StartCoroutine(Tirarfade(3f));
+    }
+
+    IEnumerator Tirarfade(float tempinho)
+    {
+        yield return new WaitForSeconds(tempinho);
+        fadezinho.SetActive(false);
+    }
 
 	void Andando()
 	{
@@ -49,7 +59,58 @@ public class Canoa : MonoBehaviour {
 
 	}
 
-	void goRemar()
+    void botaomobile()
+    {
+        if (indio.transform.position.x >= 11.5 && indio.transform.position.x <= 35.9 && click)
+        {
+            click = false;
+            if (resposta != novaresposta)
+            {
+                Debug.Log("entrou nesse game over aqui de agr");
+                SceneManager.LoadScene("GameOver");
+            }
+            else if (resposta == novaresposta)
+            {
+                balaoDuvida.SetActive(false);
+                goOrStay = true;
+                indio.GetComponent<Animator>().SetBool("remando", true);
+                Invoke("AtivarTato", 1f);
+                Controller.GetComponent<Score>().Addscore();
+            }
+        }
+    }
+
+    public void usarmao()
+    {
+        novaresposta = "tocar";
+        click = true;
+    }
+
+    public void usaraudicao()
+    {
+        novaresposta = "audicao";
+        click = true;
+    }
+
+    public void usarolfato()
+    {
+        novaresposta = "olfato";
+        click = true;
+    }
+
+    public void usarvisao()
+    {
+        novaresposta = "visao";
+        click = true;
+    }
+
+    public void usarpaladar()
+    {
+        novaresposta = "paladar";
+        click = true;
+    }
+
+    void goRemar()
 	{
 		if (Input.GetKeyDown(KeyCode.Alpha3))
 		{
@@ -59,9 +120,8 @@ public class Canoa : MonoBehaviour {
 				balaoDuvida.SetActive(false);
 				goOrStay = true;
 				indio.GetComponent<Animator>().SetBool("remando", true);
-				//GetComponent<Score>().Addscore();
 				Invoke("AtivarTato", 3f);
-                GetComponent<Score>().Addscore();
+                GetComponent<Score_Fase3>().Addscore();
 
             }
 		}

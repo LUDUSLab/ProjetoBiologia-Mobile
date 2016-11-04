@@ -8,6 +8,9 @@ public class Escalada : MonoBehaviour {
     bool tato = false;
     private indiozinho personagem;
 	public float forcinhaPraPular;
+    public string resposta;
+    private string novaresposta;
+    private bool click = false;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +21,7 @@ public class Escalada : MonoBehaviour {
 	void Update () {
         stopTato();
 		goEscalada();
+        botaomobile();
 	}
 
     void stopTato()
@@ -35,6 +39,65 @@ public class Escalada : MonoBehaviour {
         }
     }
 
+
+
+    void botaomobile()
+    {
+        if(indio.transform.position.x >= 4.3 && indio.transform.position.x <= 4.7 && click)
+        {
+            click = false;
+            if (resposta != novaresposta)
+            {
+                Debug.Log("entrou nesse game over aqui de agr da escalada");
+                SceneManager.LoadScene("GameOver");
+            }
+            else if (resposta == novaresposta)
+            {
+                balaoDuvida.SetActive(false);
+                barraTempo.SetActive(false);
+                Vector2 direcaoPulo = new Vector2(0.1f, 0.7f);
+                direcaoPulo.Normalize();
+                indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
+                this.GetComponent<Escalada>().enabled = false;
+                indio.GetComponent<Animator>().SetBool("pulando", true);
+                Invoke("VoltaraAndar", 0.6f);
+                GetComponent<Score>().Addscore();
+            }
+        }
+    }
+
+
+    public void usarmao()
+    {
+        novaresposta = "tocar";
+        click = true;
+    }
+
+    public void usaraudicao()
+    {
+        novaresposta = "audicao";
+        click = true;
+    }
+
+    public void usarolfato()
+    {
+        novaresposta = "olfato";
+        click = true;
+    }
+
+    public void usarvisao()
+    {
+        novaresposta = "visao";
+        click = true;
+    }
+
+    public void usarpaladar()
+    {
+        novaresposta = "paladar";
+        click = true;
+    }
+
+
 	void goEscalada()
 	{
 		if (Input.GetKeyDown(KeyCode.Alpha3))
@@ -48,7 +111,6 @@ public class Escalada : MonoBehaviour {
                 indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
                 this.GetComponent<Escalada>().enabled = false;
                 indio.GetComponent<Animator>().SetBool("pulando", true);
-                //personagem.goOrStay = true;
                 Invoke("VoltaraAndar", 0.6f);
 				GetComponent<Score>().Addscore();
             }

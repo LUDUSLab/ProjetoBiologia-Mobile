@@ -8,62 +8,64 @@ public class GameOverButtons : MonoBehaviour {
     private string tryAgain;
     public Text highScoreText;
     public Text scoreText;
-    public GameObject hudSair, fade;
+    public GameObject fade, fadeIn;
 
     void Start()
     {
         tryAgain = PlayerPrefs.GetString("faseAtual");
         Score.FinalScore();
         ViewScore();
-        Invoke("tirarFade", 1.5f);
+        Invoke("tirarFade", 2.2f);
     }
 
-    void tirarFade ()
+    /*void tirarFade ()
     {
         fade.SetActive(false);
-    }
+    }*/
 
 	public void Menu()
 	{
-		SceneManager.LoadScene ("Menu");
+        fadeIn.SetActive(true);
+        Invoke("goMenu", 1.5f);
 	}
+
+    void goMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 
 	public void jogarNovamente()
 	{
-		SceneManager.LoadScene (tryAgain);
-	}
+        fadeIn.SetActive(true);
+        Invoke("deNovo", 1.5f);
+    }
+
+    void deNovo()
+    {
+        SceneManager.LoadScene(tryAgain);
+    }
 
     
     public void ProximaFase()
     {
-        if( tryAgain == "Fase1")
+        fadeIn.SetActive(true);
+        Invoke("nexttoPlay", 1.5f);
+    }
+
+    void nexttoPlay()
+    {
+        if (tryAgain == "Fase1")
         {
             SceneManager.LoadScene("CenarioBonito");
         }
-        else if( tryAgain == "CenarioBonito")
+        else if (tryAgain == "CenarioBonito")
         {
             SceneManager.LoadScene("Fase3");
         }
-        else if( tryAgain == "Fase3")
+        else if (tryAgain == "Fase3")
         {
-            SceneManager.LoadScene("Manu");
+            SceneManager.LoadScene("Menu");
         }
-    }
-  
-
-    public void Sair()
-    {
-        hudSair.SetActive(true);
-    }
-
-    public void Sim()
-    {
-        Application.Quit();
-    }
-
-    public void Nao()
-    {
-        hudSair.SetActive(false);
     }
 
     void ViewScore()

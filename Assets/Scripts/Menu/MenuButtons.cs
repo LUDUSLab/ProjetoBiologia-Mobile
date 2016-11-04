@@ -23,7 +23,7 @@ public class MenuButtons : MonoBehaviour {
         Invoke("cenaCreditos", 1.5f);
     }
 
-    public void ceneCreditos()
+    public void cenaCreditos()
     {
         SceneManager.LoadScene("Informacoes");
     }
@@ -34,6 +34,12 @@ public class MenuButtons : MonoBehaviour {
     }
 
     public void Sim()
+    {
+        fadeIn.SetActive(true);
+        Invoke("goodbye", 1.5f);
+    }
+
+    void goodbye()
     {
         Application.Quit();
     }

@@ -7,6 +7,8 @@ public class CheirarFlor : MonoBehaviour {
 	public GameObject  indio, balaoDuvida, 	barraTempoObject, flores;
 	private indiozinho personagem;
 	bool nariz = false, parar = false;
+    private bool click = false;
+    private string resposta = "olfato", novaresposta;
 	//public float tempoBarrinha;
 	//private float tempoInicial;
 	// Use this for initialization
@@ -18,7 +20,8 @@ public class CheirarFlor : MonoBehaviour {
 	void Update () {
 		stopCheirar();
 		goCheirar();
-	}
+        botaomobile();
+    }
 	void stopCheirar()
 	{
 		if(indio.transform.position.x >=96.1 && indio.transform.position.x <= 96.4)
@@ -36,7 +39,74 @@ public class CheirarFlor : MonoBehaviour {
 		}
 	}
 
-	void goCheirar()
+    public void usarmao()
+    {
+        if (indio.transform.position.x >= 96.1 && indio.transform.position.x <= 96.4)
+        {
+            novaresposta = "tocar";
+            click = true;
+        }
+    }
+
+    public void usaraudicao()
+    {
+        if (indio.transform.position.x >= 96.1 && indio.transform.position.x <= 96.4)
+        {
+            novaresposta = "audicao";
+            click = true;
+        }
+    }
+
+    public void usarolfato()
+    {
+        if (indio.transform.position.x >= 96.1 && indio.transform.position.x <= 96.4)
+        {
+            novaresposta = "olfato";
+            click = true;
+        }
+    }
+
+    public void usarvisao()
+    {
+        if (indio.transform.position.x >= 96.1 && indio.transform.position.x <= 96.4)
+        {
+            novaresposta = "visao";
+            click = true;
+        }
+    }
+
+    public void usarpaladar()
+    {
+        if (indio.transform.position.x >= 96.1 && indio.transform.position.x <= 96.4)
+        {
+            novaresposta = "paladar";
+            click = true;
+        }
+    }
+
+    void botaomobile()
+    {
+        if (indio.transform.position.x >= 96.1 && indio.transform.position.x <= 96.4 && click)
+        {
+            click = false;
+            if (resposta != novaresposta)
+            {
+                Debug.Log("entrou nesse game over aqui de agr da escalada");
+                SceneManager.LoadScene("GameOver");
+            }
+            else if (resposta == novaresposta)
+            {
+                balaoDuvida.SetActive(false);
+                barraTempoObject.SetActive(false);
+                indio.GetComponent<Animator>().SetBool("pegar", true);
+                indio.GetComponent<Animator>().SetBool("parar", false);
+                GetComponent<Score>().Addscore();
+                Invoke("SumirFlor", 2);
+            }
+        }
+    }
+
+    void goCheirar()
 	{
 		if(Input.GetKeyDown(KeyCode.Alpha1))
 		{

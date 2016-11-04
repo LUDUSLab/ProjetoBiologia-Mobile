@@ -9,7 +9,8 @@ public class Tronco : MonoBehaviour {
 	private indiozinho personagem;
 	public float forcinhaPraPular;
 	public GameObject tronco;
-
+    private bool click;
+    private string resposta = "tocar", novaresposta;
 
 	void Start () {
 		personagem = indio.GetComponent<indiozinho>();
@@ -20,7 +21,8 @@ public class Tronco : MonoBehaviour {
 	void Update () {
 		stopTato();
 		goEscalada();
-	}
+        botaomobile();
+    }
 
 	void stopTato()
 	{
@@ -37,6 +39,8 @@ public class Tronco : MonoBehaviour {
 			}
 		}
 	}
+
+
 
 	void goEscalada()
 	{
