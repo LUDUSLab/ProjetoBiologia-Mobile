@@ -27,12 +27,12 @@ public class GameOverButtons : MonoBehaviour {
 		SceneManager.LoadScene (tryAgain);
 	}
 
-    /*
+    
     public void ProximaFase()
     {
-        Chamar a proxima fase automaticamente depois de alguns segundos
+        SceneManager.LoadScene("CenarioBonito");
     }
-    */
+    
 
     public void Sair()
     {

@@ -22,7 +22,7 @@ public class Score : MonoBehaviour
 		cont += Time.deltaTime; // conta a pontuação de acordo com o tempo decorrido
 
         if (scoreText) // Atualiza somente se encontrar um componente de texto
-            scoreText.text = "Pontuação: " + (int)score ;
+            scoreText.text = "Pontuação: " + (int)score;
     }
 
 	public void Addscore()

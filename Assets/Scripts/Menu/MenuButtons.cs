@@ -13,7 +13,7 @@ public class MenuButtons : MonoBehaviour {
 
 	public void Info()
 	{
-		SceneManager.LoadScene ("Informacoes");
+		SceneManager.LoadScene("Informacoes");
 	}
 
     public void SairdoJogo()
