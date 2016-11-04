@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Pedrinha : MonoBehaviour {
 
-	public GameObject indio, balaoDuvida, feedBackVisao, PedraConcreta;
+	public GameObject indio, balaoDuvida, feedBackVisao, PedraConcreta, barraTempo;
 	bool tato = false;
 	bool visao = false;
 	private indiozinho personagem;
@@ -29,6 +29,7 @@ public class Pedrinha : MonoBehaviour {
 		{
 			if(visao == false)
 			{
+				barraTempo.SetActive(true);
 				balaoDuvida.SetActive (true);
 				feedBackVisao.SetActive (true);
 				personagem.goOrStay = false;
@@ -41,10 +42,11 @@ public class Pedrinha : MonoBehaviour {
 
 	void goOlhar()
 	{
-		if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Q))
+		if (Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.T))
 		{
 			if (indio.transform.position.x >= 73.7 && indio.transform.position.x <= 73.9)
 			{
+				barraTempo.SetActive(false);
 				indio.GetComponent<Animator>().SetBool("parar", false);
 				balaoDuvida.SetActive(false);
 				feedBackVisao.SetActive (false);
@@ -68,6 +70,7 @@ public class Pedrinha : MonoBehaviour {
 		{
 			if(tato == false)
 			{
+				barraTempo.SetActive(true);				
 				balaoDuvida.SetActive (true);
 				personagem.goOrStay = false;
 				indio.GetComponent<Animator>().SetBool("parar", true);
@@ -82,6 +85,7 @@ public class Pedrinha : MonoBehaviour {
 		{
 			if (indio.transform.position.x >= 77.6 && indio.transform.position.x <= 77.8)
 			{
+				barraTempo.SetActive(false);
 				balaoDuvida.SetActive(false);
 				Vector2 direcaoPulo = new Vector2(0.2f, 0.8f);
 				direcaoPulo.Normalize();

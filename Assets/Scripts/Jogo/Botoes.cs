@@ -10,12 +10,16 @@ public class Botoes : MonoBehaviour {
     private indiozinho personagem;
     public float forcinhaPraPular;
 
-
-
     void Start () {
         personagem = indio.GetComponent<indiozinho>();
         StartCoroutine(Tirarfade(3f));
 	}
+
+    IEnumerator Tirarfade(float tempo)
+    {
+        yield return new WaitForSeconds(tempo);
+        fadezinho.SetActive(false);
+    }
 	
 	void Update () {
         stopPassaro();
@@ -29,12 +33,6 @@ public class Botoes : MonoBehaviour {
         stopJatoba();
         goComer();
 	}
-
-    IEnumerator Tirarfade(float tempo)
-    {
-        yield return new WaitForSeconds(tempo);
-        fadezinho.SetActive(false);
-    }
 
     void stopPassaro ()
     {
@@ -67,7 +65,7 @@ public class Botoes : MonoBehaviour {
 
     void stopPedra()
     {
-        if (indio.transform.position.x >= 31.5 && indio.transform.position.x <= 31.7)
+        if (indio.transform.position.x >= 25.5 && indio.transform.position.x <= 28.09)
         {
             if (tato == false)
             {
@@ -95,7 +93,7 @@ public class Botoes : MonoBehaviour {
 
     void stopBuraco()
     {
-        if (indio.transform.position.x >= 51.6 && indio.transform.position.x <= 51.9)
+        if (indio.transform.position.x >= 46.8 && indio.transform.position.x <= 46.9)
         {
             if (visa == false)
             {
@@ -131,7 +129,7 @@ public class Botoes : MonoBehaviour {
 
     void stopUxi()
     {
-        if (indio.transform.position.x >= 68.8 && indio.transform.position.x <= 69)
+        if (indio.transform.position.x >= 63.9 && indio.transform.position.x <= 64.1)
         {
             if (pala == false)
             {
@@ -160,7 +158,7 @@ public class Botoes : MonoBehaviour {
 
     void stopJatoba()
     {
-        if (indio.transform.position.x >= 107.7 && indio.transform.position.x <= 107.9)
+        if (indio.transform.position.x >= 81.0 && indio.transform.position.x <= 81.1)
         {
             if (olfa == false)
             {
@@ -193,60 +191,64 @@ public class Botoes : MonoBehaviour {
         indio.GetComponent<Animator>().SetBool("comer", false);
     }
 
-    public void audicao()
+    public void ouvir()
     {
         if (indio.transform.position.x >= 6.9 && indio.transform.position.x <= 7.2)
         {
-            Debug.Log("entrou audicao");
             balAud.SetActive(false);
             personagem.goOrStay = true;
             indio.GetComponent<Animator>().SetBool("parar", false);
             indio.GetComponent<Animator>().SetBool("escutar", false);
-        }
-    }
-
-    public void visao()
-    {
-        if (indio.transform.position.x >= 51.6 && indio.transform.position.x <= 51.9)
-        {
-            balVisao.SetActive(false);
-            Vector2 direcaoPulo = new Vector2(0.8f, 0.9f);
-            direcaoPulo.Normalize();
-            indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
-            Invoke("VoltaraAndar", 0.8f);
+            GetComponent<Score_Fase_1>().Addscore();
         }
     }
 
     public void tocar()
     {
-        if (indio.transform.position.x >= 31.5 && indio.transform.position.x <= 31.7)
+        if (indio.transform.position.x >= 25.5 && indio.transform.position.x <= 26.09)
         {
             balTato.SetActive(false);
             personagem.goOrStay = true;
             indio.GetComponent<Animator>().SetBool("parar", false);
+            GetComponent<Score_Fase_1>().Addscore();
         }
     }
 
-    public void olfato()
+    public void olhar()
     {
-        if (indio.transform.position.x >= 68.8 && indio.transform.position.x <= 69)
+        if (indio.transform.position.x >= 46.8 && indio.transform.position.x <= 46.9)
+        {
+            balVisao.SetActive(false);
+            Vector2 direcaoPulo = new Vector2(0.8f, 0.9f);
+            direcaoPulo.Normalize();
+            indio.GetComponent<Rigidbody2D>().AddForce(direcaoPulo * forcinhaPraPular);
+            //personagem.goOrStay = true;
+            Invoke("VoltaraAndar", 0.8f);
+            GetComponent<Score_Fase_1>().Addscore();
+        }
+    }
+
+    public void cheirar()
+    {
+        if (indio.transform.position.x >= 63.9 && indio.transform.position.x <= 64.1)
         {
             balPaladar.SetActive(false);
             personagem.goOrStay = true;
             indio.GetComponent<Animator>().SetBool("parar", false);
             indio.GetComponent<Animator>().SetBool("cheirar", false);
+            GetComponent<Score_Fase_1>().Addscore();
         }
     }
 
-    public void paladar()
+    public void comer()
     {
-        if (indio.transform.position.x >= 107.7 && indio.transform.position.x <= 107.9)
+        if (indio.transform.position.x >= 81.0 && indio.transform.position.x <= 81.1)
         {
             flor.SetActive(false);
             balOlfato.SetActive(false);
             indio.GetComponent<Animator>().SetBool("comer", true);
             Invoke("VoltaraAndar", 1.5f);
+            GetComponent<Score_Fase_1>().Addscore();
         }
     }
-
 }

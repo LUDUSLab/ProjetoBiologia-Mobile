@@ -2,8 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Score : MonoBehaviour
-{
+public class Score_Fase_1 : MonoBehaviour {
+
     [HideInInspector]
     public static float score, cont, addzinho = 2000;
     public Text scoreText;
@@ -19,16 +19,16 @@ public class Score : MonoBehaviour
 
     void Update()
     {
-		cont += Time.deltaTime; // conta a pontuação de acordo com o tempo decorrido
+        cont += Time.deltaTime; // conta a pontuação de acordo com o tempo decorrido
 
         if (scoreText) // Atualiza somente se encontrar um componente de texto
-            scoreText.text = "Pontuação: " + (int)score ;
+            scoreText.text = "Pontuação: " + (int)score;
     }
 
-	public void Addscore()
-	{
-		score += addzinho;
-	}
+    public void Addscore()
+    {
+        score += addzinho;
+    }
 
     public static void FinalScore()
     {
@@ -41,5 +41,4 @@ public class Score : MonoBehaviour
         }
 
     }
-
 }
