@@ -10,19 +10,18 @@ public class Tronco : MonoBehaviour {
 	public float forcinhaPraPular;
 	public GameObject tronco;
 
-	// Use this for initialization
+
 	void Start () {
 		personagem = indio.GetComponent<indiozinho>();
 		indio.GetComponent<Animator>().SetBool("cheirar", false);
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
 		stopTato();
 		goEscalada();
-
-	
 	}
+
 	void stopTato()
 	{
 		if(indio.transform.position.x >=113.0 && indio.transform.position.x <=113.4)
@@ -41,7 +40,7 @@ public class Tronco : MonoBehaviour {
 
 	void goEscalada()
 	{
-		if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Q))
+		if (Input.GetKeyDown(KeyCode.Alpha3))
 		{
 			if (indio.transform.position.x >= 113.0 && indio.transform.position.x <= 113.4)
 			{
@@ -53,12 +52,11 @@ public class Tronco : MonoBehaviour {
 				//this.GetComponent<Escalada>().enabled = false;
 				indio.GetComponent<Animator>().SetBool("empurrar", true);
 				Invoke("mudarOvalor", 2);
-				//personagem.goOrStay = true;
-
-				//GetComponent<Score>().Addscore();
+                //personagem.goOrStay = true;
+                GetComponent<Score>().Addscore();
 			}
 		}
-		else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
+		else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha4))
 		{
 			if (indio.transform.position.x >= 113.0 && indio.transform.position.x <= 113.4)
 			{
@@ -75,6 +73,7 @@ public class Tronco : MonoBehaviour {
 	}
 
 	void PularOTronco(){
+		tronco.GetComponent<Rigidbody2D>().isKinematic = true;
 		Vector2 direcaoPulo = new Vector2(0.3f, 0.8f);
 		direcaoPulo.Normalize();
 		indio.GetComponent<Animator>().SetBool("pulando", true);

@@ -28,6 +28,7 @@ public class Cipo : MonoBehaviour {
             if(visao == false)
             {	
 				cipoSinlhueta.SetActive(true);
+                barraTempoObject.SetActive(true);
 				feedBackVision.SetActive(true);
 				personagem.goOrStay = false;
 				balaoDuvida.SetActive (true);
@@ -40,7 +41,7 @@ public class Cipo : MonoBehaviour {
 
     void goVerCipo()
     {
-		if (Input.GetKeyDown(KeyCode.Keypad5)|| Input.GetKeyDown(KeyCode.W))
+		if (Input.GetKeyDown(KeyCode.Alpha5))
         {
                 feedBackVision.SetActive(false);
                 cipoSinlhueta.SetActive(false);
@@ -50,7 +51,7 @@ public class Cipo : MonoBehaviour {
                 indio.GetComponent<Animator>().SetBool("parar", false);
                 GetComponent<Score>().Addscore();
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad4))
+        else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4))
         {
             if (indio.transform.position.x >= 20 && indio.transform.position.x <= 20.9)
             {
@@ -76,7 +77,7 @@ public class Cipo : MonoBehaviour {
 
     void goPularCipo()
     {
-		if (Input.GetKeyDown(KeyCode.Keypad3)|| Input.GetKeyDown(KeyCode.E))
+		if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             if (tato == true)
             {
@@ -94,7 +95,7 @@ public class Cipo : MonoBehaviour {
                 GetComponent<Score>().Addscore();
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
+        else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Alpha5))
         {
             if (indio.transform.position.x >= 23.5 && indio.transform.position.x <= 23.9)
             {

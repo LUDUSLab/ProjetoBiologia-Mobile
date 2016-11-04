@@ -64,6 +64,6 @@ public class EntrarBarco : MonoBehaviour {
 
     void GameOver()
     {
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("Vitoria");
     }
 }

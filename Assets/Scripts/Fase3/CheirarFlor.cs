@@ -38,7 +38,7 @@ public class CheirarFlor : MonoBehaviour {
 
 	void goCheirar()
 	{
-		if(Input.GetKeyDown(KeyCode.Keypad1)|| Input.GetKeyDown(KeyCode.R))
+		if(Input.GetKeyDown(KeyCode.Alpha1))
 		{
 			if(indio.transform.position.x >=96.1 && indio.transform.position.x <= 96.4)
 			{
@@ -48,12 +48,12 @@ public class CheirarFlor : MonoBehaviour {
 				//indio.GetComponent<Animator>().SetBool("cheirar", false);
 				indio.GetComponent<Animator>().SetBool("pegar", true);
 				indio.GetComponent<Animator>().SetBool("parar", false);
-				//GetComponent<Score>().Addscore();
+				GetComponent<Score>().Addscore();
 				//KD ELE CHEIRANDO
 				Invoke("SumirFlor", 2);
 			}
 		}
-		else if (Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
+		else if (Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4))
 		{
 			if (indio.transform.position.x >= 94.1 && indio.transform.position.x <= 94.4)
 			{

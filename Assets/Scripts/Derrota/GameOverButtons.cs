@@ -8,13 +8,19 @@ public class GameOverButtons : MonoBehaviour {
     private string tryAgain;
     public Text highScoreText;
     public Text scoreText;
-    public GameObject hudSair;
+    public GameObject hudSair, fade;
 
     void Start()
     {
         tryAgain = PlayerPrefs.GetString("faseAtual");
         Score.FinalScore();
         ViewScore();
+        Invoke("tirarFade", 1.5f);
+    }
+
+    void tirarFade ()
+    {
+        fade.SetActive(false);
     }
 
 	public void Menu()
@@ -30,9 +36,20 @@ public class GameOverButtons : MonoBehaviour {
     
     public void ProximaFase()
     {
-        SceneManager.LoadScene("CenarioBonito");
+        if( tryAgain == "Fase1")
+        {
+            SceneManager.LoadScene("CenarioBonito");
+        }
+        else if( tryAgain == "CenarioBonito")
+        {
+            SceneManager.LoadScene("Fase3");
+        }
+        else if( tryAgain == "Fase3")
+        {
+            SceneManager.LoadScene("Manu");
+        }
     }
-    
+  
 
     public void Sair()
     {

@@ -12,7 +12,7 @@ public class FadeFinalFase : MonoBehaviour {
 
     void Fadezinho()
     {
-        if(indio.transform.position.x >= 91 && indio.transform.position.x >= 92)
+        if(indio.transform.position.x >= 118 && indio.transform.position.x >= 119)
         {
             Invoke("ChamarFade", 1f);
         }
@@ -21,10 +21,10 @@ public class FadeFinalFase : MonoBehaviour {
     void ChamarFade()
     {
         fadeIn.SetActive(true);
-        Invoke("Vitoria", 1.5f);
+        Invoke("Pontinhos", 1.5f);
     }
 
-    void Vitoria()
+    void Pontinhos()
     {
         SceneManager.LoadScene("Vitoria");
     }

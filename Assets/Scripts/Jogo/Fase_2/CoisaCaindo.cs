@@ -44,7 +44,7 @@ public class CoisaCaindo : MonoBehaviour {
 
 	void goAudicao()
 	{
-		if(Input.GetKeyDown(KeyCode.Keypad4)|| Input.GetKeyDown(KeyCode.D))
+		if(Input.GetKeyDown(KeyCode.Alpha4))
 		{
 			if(audicao == true)
 			{
@@ -62,7 +62,7 @@ public class CoisaCaindo : MonoBehaviour {
                 GetComponent<Score>().Addscore();
             }
 		}
-		else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad5))
+		else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha5))
 		{
 			if (indio.transform.position.x >= 35 && indio.transform.position.x <= 35.5)
 			{

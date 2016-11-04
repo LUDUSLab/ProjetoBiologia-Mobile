@@ -49,7 +49,7 @@ public class Jatoba : MonoBehaviour {
 
 	void goCheirar()
 	{
-		if(Input.GetKeyDown(KeyCode.Keypad1)|| Input.GetKeyDown(KeyCode.R))
+		if(Input.GetKeyDown(KeyCode.Alpha1))
 		{
 			if(nariz == true)
 			{
@@ -67,7 +67,7 @@ public class Jatoba : MonoBehaviour {
                 //Invoke("VoltaraAndar", 4);
             }
 		}
-		else if (Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
+		else if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha5))
 		{
 			if (indio.transform.position.x >= 63 && indio.transform.position.x <= 63.9)
 			{
@@ -95,7 +95,7 @@ public class Jatoba : MonoBehaviour {
     
     void goJatoba()
     {
-		if (Input.GetKeyDown(KeyCode.Keypad2)|| Input.GetKeyDown(KeyCode.T))
+		if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             if(paladar == true)
             {
@@ -110,7 +110,7 @@ public class Jatoba : MonoBehaviour {
                 GetComponent<Score>().Addscore();
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
+        else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha5))
         {
             if (indio.transform.position.x >= 65 && indio.transform.position.x <= 65.1)
             {

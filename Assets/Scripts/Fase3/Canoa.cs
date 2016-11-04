@@ -51,7 +51,7 @@ public class Canoa : MonoBehaviour {
 
 	void goRemar()
 	{
-		if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Q))
+		if (Input.GetKeyDown(KeyCode.Alpha3))
 		{
 			if (indio.transform.position.x >= 11.5 && indio.transform.position.x <= 11.9 || indio.transform.position.x >=23.5 && indio.transform.position.x <=23.9
 				|| indio.transform.position.x >=35.5 && indio.transform.position.x <=35.9)
@@ -61,10 +61,11 @@ public class Canoa : MonoBehaviour {
 				indio.GetComponent<Animator>().SetBool("remando", true);
 				//GetComponent<Score>().Addscore();
 				Invoke("AtivarTato", 3f);
+                GetComponent<Score>().Addscore();
 
-			}
+            }
 		}
-		else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
+		else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha4))
 		{
 			if (indio.transform.position.x >= 11.5 && indio.transform.position.x <= 11.9 || indio.transform.position.x >=23.5 && indio.transform.position.x <=23.9
 				|| indio.transform.position.x >=35.5 && indio.transform.position.x <=35.9)

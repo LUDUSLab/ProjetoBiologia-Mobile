@@ -5,12 +5,6 @@ public class Pause : MonoBehaviour {
 
     public GameObject telaPause;
 
-
-	void Start () {
-	
-	}
-	
-
 	void Update () {
         pausar();
 	}

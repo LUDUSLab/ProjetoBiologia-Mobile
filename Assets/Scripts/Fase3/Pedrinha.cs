@@ -42,7 +42,7 @@ public class Pedrinha : MonoBehaviour {
 
 	void goOlhar()
 	{
-		if (Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.T))
+		if (Input.GetKeyDown(KeyCode.Alpha5))
 		{
 			if (indio.transform.position.x >= 73.7 && indio.transform.position.x <= 73.9)
 			{
@@ -52,10 +52,10 @@ public class Pedrinha : MonoBehaviour {
 				feedBackVisao.SetActive (false);
 				PedraConcreta.SetActive(true);
 				personagem.goOrStay = true;
-				//GetComponent<Score>().Addscore();
+				GetComponent<Score>().Addscore();
 			}
 		}
-		else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Keypad5))
+		else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4))
 		{
 			if (indio.transform.position.x >= 73.7 && indio.transform.position.x <= 73.9)
 			{
@@ -81,7 +81,7 @@ public class Pedrinha : MonoBehaviour {
 
 	void GoTato(){
 
-		if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.W))
+		if (Input.GetKeyDown(KeyCode.Alpha3))
 		{
 			if (indio.transform.position.x >= 77.6 && indio.transform.position.x <= 77.8)
 			{
@@ -94,7 +94,14 @@ public class Pedrinha : MonoBehaviour {
 				indio.GetComponent<Animator>().SetBool("pulando", true);
 				//personagem.goOrStay = true;
 				Invoke("VoltaraAndar", 0.6f);
-				//GetComponent<Score>().Addscore();
+				GetComponent<Score>().Addscore();
+			}
+		}
+		else if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha4))
+		{
+			if (indio.transform.position.x >= 77.6 && indio.transform.position.x <= 77.8)
+			{
+				SceneManager.LoadScene("gameOver");
 			}
 		}
 	}
