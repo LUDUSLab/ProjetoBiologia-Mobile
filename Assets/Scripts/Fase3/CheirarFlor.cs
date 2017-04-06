@@ -35,7 +35,6 @@ public class CheirarFlor : MonoBehaviour {
 				indio.GetComponent<Animator>().SetBool("cheirar", true);
 				nariz = true;
 			}
-
 		}
 	}
 

@@ -59,6 +59,7 @@ public class EntrarBarco : MonoBehaviour {
 	void FadeIn(){
 		fadeIn.SetActive (true);
         Invoke("GameOver", 1.5f);
+		Debug.Log ("entrou no fadein");
 
     }
 

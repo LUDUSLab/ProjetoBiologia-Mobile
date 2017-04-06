@@ -12,7 +12,7 @@ public class FadeFinalFase : MonoBehaviour {
 
     void Fadezinho()
     {
-        if(indio.transform.position.x >= 118 && indio.transform.position.x >= 119)
+		if(indio.transform.position.x >= 110 && indio.transform.position.x >= 111)
         {
             Invoke("ChamarFade", 1f);
         }

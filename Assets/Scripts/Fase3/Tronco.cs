@@ -9,12 +9,12 @@ public class Tronco : MonoBehaviour {
 	private indiozinho personagem;
 	public float forcinhaPraPular;
 	public GameObject tronco;
-    private bool click;
+	private bool click = false;
     private string resposta = "tocar", novaresposta;
 
 	void Start () {
 		personagem = indio.GetComponent<indiozinho>();
-		indio.GetComponent<Animator>().SetBool("cheirar", false);
+		//indio.GetComponent<Animator>().SetBool("cheirar", false);
 	}
 	
 
@@ -23,6 +23,71 @@ public class Tronco : MonoBehaviour {
 		goEscalada();
         botaomobile();
     }
+
+	void botaomobile()
+	{
+		if (indio.transform.position.x >= 113.0 && indio.transform.position.x <= 113.4 && click) 
+		{
+			click = false;
+			if (resposta != novaresposta) {
+				Debug.Log ("entrou nesse game over aqui de agr do tronco");
+				SceneManager.LoadScene ("GameOver");
+			}
+			else if (resposta == novaresposta) 
+			{
+				barraTempo.SetActive(false);
+				balaoDuvida.SetActive(false);
+				indio.GetComponent<Animator>().SetBool("empurrar", true);
+				Invoke("mudarOvalor", 2);
+				GetComponent<Score>().Addscore();
+			}
+		}
+	}
+
+	public void usarmao()
+	{
+		if (indio.transform.position.x >= 113.0 && indio.transform.position.x <= 113.4)
+		{
+			novaresposta = "tocar";
+			click = true;
+		}
+	}
+
+	public void usaraudicao()
+	{
+		if (indio.transform.position.x >= 113.0 && indio.transform.position.x <= 113.4)
+		{
+			novaresposta = "audicao";
+			click = true;
+		}
+	}
+
+	public void usarolfato()
+	{
+		if (indio.transform.position.x >= 113.0 && indio.transform.position.x <= 113.4)
+		{
+			novaresposta = "olfato";
+			click = true;
+		}
+	}
+
+	public void usarvisao()
+	{
+		if (indio.transform.position.x >= 113.0 && indio.transform.position.x <= 113.4)
+		{
+			novaresposta = "visao";
+			click = true;
+		}
+	}
+
+	public void usarpaladar()
+	{
+		if (indio.transform.position.x >= 113.0 && indio.transform.position.x <= 113.4)
+		{
+			novaresposta = "paladar";
+			click = true;
+		}
+	}
 
 	void stopTato()
 	{

@@ -7,6 +7,8 @@ public class Passaro : MonoBehaviour {
 	public GameObject indio, balaodeDuvida, barraTempo, fadeIn;
 	bool audicao = false;
 	private indiozinho personagem;
+	private bool click = false;
+	private string resposta = "audicao", novaresposta;
 
 	void Start () {
 		personagem = indio.GetComponent<indiozinho>();
@@ -16,6 +18,74 @@ public class Passaro : MonoBehaviour {
 		stopPassaro();
 		goPassaro();
 		fadezinho();
+		botaomobile ();
+	}
+
+	public void usarmao()
+	{
+		if (indio.transform.position.x >= 141.3 && indio.transform.position.x <= 141.5)
+		{
+			novaresposta = "tocar";
+			click = true;
+		}
+	}
+
+	public void usaraudicao()
+	{
+		if (indio.transform.position.x >= 141.3 && indio.transform.position.x <= 141.5)
+		{
+			novaresposta = "audicao";
+			click = true;
+		}
+	}
+
+	public void usarolfato()
+	{
+		if (indio.transform.position.x >= 141.3 && indio.transform.position.x <= 141.5)
+		{
+			novaresposta = "olfato";
+			click = true;
+		}
+	}
+
+	public void usarvisao()
+	{
+		if (indio.transform.position.x >= 141.3 && indio.transform.position.x <= 141.5)
+		{
+			novaresposta = "visao";
+			click = true;
+		}
+	}
+
+	public void usarpaladar()
+	{
+		if (indio.transform.position.x >= 141.3 && indio.transform.position.x <= 141.5)
+		{
+			novaresposta = "paladar";
+			click = true;
+		}
+	}
+
+	void botaomobile()
+	{
+		if(indio.transform.position.x >= 141.3 && indio.transform.position.x <= 141.5 && click)
+		{
+			click = false;
+			if (resposta != novaresposta) 
+			{
+				Debug.Log ("entrou nesse game over aqui de agr do pássaro");
+				SceneManager.LoadScene ("GameOver");
+			} 
+			else if (resposta == novaresposta) 
+			{
+				indio.GetComponent<Animator>().SetBool("escutar", false);
+				balaodeDuvida.SetActive(false);
+				barraTempo.SetActive(false);
+				personagem.goOrStay = true;
+				indio.GetComponent<Animator>().SetBool("parar", false);
+				GetComponent<Score>().Addscore();
+			}
+		}
 	}
 
 	void stopPassaro()

@@ -18,10 +18,10 @@ public class GameOverButtons : MonoBehaviour {
         Invoke("tirarFade", 2.2f);
     }
 
-    /*void tirarFade ()
+    void tirarFade ()
     {
         fade.SetActive(false);
-    }*/
+    }
 
 	public void Menu()
 	{
@@ -48,6 +48,7 @@ public class GameOverButtons : MonoBehaviour {
     
     public void ProximaFase()
     {
+		Debug.Log ("entrou na proxima fase");
         fadeIn.SetActive(true);
         Invoke("nexttoPlay", 1.5f);
     }
