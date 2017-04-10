@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{667037ab-29fd-4b11-81d8-7b8a4da541bd}">
+        <property name="assetPath">
+            <value>Gentle+Waves+&amp;amp;+Lapping+Water+Sounds+SOUND+EFFECT.mp3</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>288.44408163265308</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{58ad393a-4cde-47fb-b145-97194bc2a29c}</destination>
+        </relationship>
+    </object>
+</objects>

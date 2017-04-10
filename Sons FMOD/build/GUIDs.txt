@@ -1,0 +1,11 @@
+{56e399bd-28c2-4adc-bb97-7b49e64f0ec1} event:/Background
+{a1cae4cd-02c8-4b71-8095-b2fb5a5f3db4} event:/Cheirar
+{883e9295-a38f-4d9c-aa9f-fb937b666eb4} event:/Musica
+{4583cd57-cb05-4b11-8d76-a488f6254d1b} event:/Passaro
+{99057a44-bbdd-4d1d-8fc9-c057ccd81f22} event:/Passos
+{fe898ed7-9efe-40c2-aac7-84d5564468f2} event:/Pulo
+{6a82d087-5d12-4bac-a3f3-72dcbd27a05f} event:/Remar
+{fa640dc0-5ec0-401d-911f-2024b886c504} event:/Caindo
+{db098ecb-9422-4f2d-b879-930ddd9795c8} bus:/
+{6692e2ce-04a6-4c3e-9aab-e774cc3c5d2a} bus:/Reverb
+{e953eb52-9131-47ef-91a2-28cebf08750a} bank:/Master Bank

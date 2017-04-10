@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{712dff3e-1977-4e8d-bc82-a3fe9e4514ba}">
+        <property name="assetPath">
+            <value>Sniff+Mmmm+Sound+Effect.mp3</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>19.696326530612247</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{58ad393a-4cde-47fb-b145-97194bc2a29c}</destination>
+        </relationship>
+    </object>
+</objects>

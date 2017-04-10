@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{abff9853-f907-4fc5-97d2-6eb8fbd55ae2}">
+        <property name="assetPath">
+            <value>FREE+SOUND+FX+Boats+Rowing+Boat+On+Lake+Oars+In+Water.mp3</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>7.2359183673469385</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{58ad393a-4cde-47fb-b145-97194bc2a29c}</destination>
+        </relationship>
+    </object>
+</objects>

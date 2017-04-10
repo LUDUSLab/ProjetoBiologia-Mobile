@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{2630d42f-72e0-43b7-b1bf-276885c81b1d}">
+        <property name="assetPath">
+            <value>Canto do Uiraparu - 20_10_16 20.33.mp3</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>31.268571428571427</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{58ad393a-4cde-47fb-b145-97194bc2a29c}</destination>
+        </relationship>
+    </object>
+</objects>

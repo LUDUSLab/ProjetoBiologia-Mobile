@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{a5d00772-9207-42f9-b3e4-198c5bf7a36c}">
+        <property name="assetPath">
+            <value>FALLING+TREE+SOUND+EFFECT+IN+HIGH+QUALITY.mp3</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>24.60734693877551</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{58ad393a-4cde-47fb-b145-97194bc2a29c}</destination>
+        </relationship>
+    </object>
+</objects>
