@@ -9,6 +9,9 @@ public class Botoes : MonoBehaviour {
     bool audi=false, tato=false, visa=false, pala=false, olfa=false;
     private indiozinho personagem;
     public float forcinhaPraPular;
+	public string canto = "event:/Passaro";
+	public string pulo = "event:/Pulo";
+	public string cheirar = "event:/Cheirar";
 
 
 
@@ -42,6 +45,7 @@ public class Botoes : MonoBehaviour {
         {
             if (audi == false)
             {
+				FMODUnity.RuntimeManager.PlayOneShot (canto);
                 botoes.GetComponent<Animator>().Play("ouvido_Tuto");
                 personagem.goOrStay = false;
                 audi = true;

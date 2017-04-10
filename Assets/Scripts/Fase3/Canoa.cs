@@ -10,6 +10,7 @@ public class Canoa : MonoBehaviour {
 	public GameObject canoa, indio, balaoDuvida, soulIndio, fadezinho, Controller;
 	bool tato = false;
 	bool Gatilho = true;
+	public string remar = "event:/Remar";
     private bool click = false;
     private string resposta = "tocar", novaresposta;
 

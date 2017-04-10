@@ -9,6 +9,7 @@ public class Tronco : MonoBehaviour {
 	private indiozinho personagem;
 	public float forcinhaPraPular;
 	public GameObject tronco;
+	public string caindo = "event:/Caindo"; //import audio asset fmod
 	private bool click = false;
     private string resposta = "tocar", novaresposta;
 
@@ -113,6 +114,7 @@ public class Tronco : MonoBehaviour {
 		{
 			if (indio.transform.position.x >= 113.0 && indio.transform.position.x <= 113.4)
 			{
+				FMODUnity.RuntimeManager.PlayOneShot (caindo);
 				barraTempo.SetActive(false);
 				balaoDuvida.SetActive(false);
 				//Vector2 direcaoPulo = new Vector2(0.1f, 0.7f);

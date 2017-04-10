@@ -8,6 +8,7 @@ public class EntrarBarco : MonoBehaviour {
 	private indiozinho personagem;
 	bool barco = false;
 	public float forcinhaPraPular;
+	public string remar = "event:/Remar"; //import audio asset fmod
 
 	// Use this for initialization
 	void Start () {
@@ -53,6 +54,7 @@ public class EntrarBarco : MonoBehaviour {
 	void Navegar(){
 		canoa.GetComponent<Animator>().SetBool("navegar", true);
 		indio.GetComponent<Animator>().SetBool("remar", true);
+		FMODUnity.RuntimeManager.PlayOneShot (remar);
 		Invoke ("FadeIn", 3f);
 	}
 

@@ -7,6 +7,7 @@ public class CheirarFlor : MonoBehaviour {
 	public GameObject  indio, balaoDuvida, 	barraTempoObject, flores;
 	private indiozinho personagem;
 	bool nariz = false, parar = false;
+	public string cheirar = "event:/Cheirar"; //import audio asset fmod
     private bool click = false;
     private string resposta = "olfato", novaresposta;
 	//public float tempoBarrinha;
@@ -117,6 +118,7 @@ public class CheirarFlor : MonoBehaviour {
 				//indio.GetComponent<Animator>().SetBool("cheirar", false);
 				indio.GetComponent<Animator>().SetBool("pegar", true);
 				indio.GetComponent<Animator>().SetBool("parar", false);
+				FMODUnity.RuntimeManager.PlayOneShot (cheirar);
 				GetComponent<Score>().Addscore();
 				//KD ELE CHEIRANDO
 				Invoke("SumirFlor", 2);
