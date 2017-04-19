@@ -17,14 +17,16 @@ public class MenuButtons : MonoBehaviour {
         SceneManager.LoadScene("Fase1");
     }
 
-	public void Info()
-	{
+    public void Info()
+    {
         fadeIn.SetActive(true);
         Invoke("cenaCreditos", 1.5f);
+        Invoke("SairFade", 1.5f);
     }
 
     public void cenaCreditos()
     {
+        Invoke("SairFade", 1.5f);
         SceneManager.LoadScene("Informacoes");
     }
 
@@ -47,6 +49,19 @@ public class MenuButtons : MonoBehaviour {
     public void Nao()
     {
         hudSair.SetActive(false);
+    }
+
+    public void Menuzinho()
+    {
+        fadeIn.SetActive(true);
+        SceneManager.LoadScene("Menu");
+
+    }
+
+    public void SairFade() {
+        Debug.Log("entrooou");
+        hudSair.SetActive(false);
+        fadeIn.SetActive(false);
     }
 
 }
